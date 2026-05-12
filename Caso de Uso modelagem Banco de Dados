@@ -1,0 +1,20 @@
+Atores do sistema:
+  Recepcionista: Será responsável por gerenciar os alunos,planos e pagamentos
+  Sistema: Terá um sistema que realiza o processamento automático, para pagamentos, para ver quem pago certo e quem está devendo, e liberara entrada e saida
+  Dono: Fica responsável por relatório financeiros
+
+Ações Principais:
+  Sistema:
+    Configurar produtos
+    Cadastrar Alunos
+    Fazer mudanças no cadastro
+    Excluir cadastros
+    Processar Financeiro
+    Monitorar pendências
+
+  Recepcionista:
+    Cadastro de Alunos
+    Fazer mudanças no cadastro
+    Excluir cadastros
+    Cadastro de Planos
+    Atendimento ao Público
