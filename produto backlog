@@ -1,0 +1,113 @@
+Descrição do Funcionamento do Sistema
+
+O sistema será um software de gerenciamento para academia, voltado para controle de alunos, planos e financeiro.
+Ele terá três atores principais: Recepcionista, Sistema Automático e Dono da Academia.
+
+Objetivo do Sistema
+
+Automatizar o controle da academia, reduzindo erros manuais e facilitando:
+
+Cadastro de alunos
+Controle de planos
+Controle financeiro
+Monitoramento de pagamentos
+Liberação de entrada e saída
+Relatórios financeiros
+Atores do Sistema
+1. Recepcionista
+
+Responsável pelo atendimento e gerenciamento operacional diário.
+
+Responsabilidades:
+Cadastrar alunos
+Atualizar cadastro dos alunos
+Excluir alunos
+Cadastrar planos
+Atender clientes
+Consultar situação financeira do aluno
+2. Sistema Automático
+
+Responsável pelas validações e processos automáticos.
+
+Responsabilidades:
+Processar pagamentos
+Verificar alunos inadimplentes
+Liberar entrada de alunos adimplentes
+Bloquear acesso de alunos inadimplentes
+Monitorar vencimentos
+Gerar alertas financeiros
+3. Dono da Academia
+
+Responsável pela gestão financeira e acompanhamento do negócio.
+
+Responsabilidades:
+Visualizar relatórios financeiros
+Consultar alunos ativos/inadimplentes
+Acompanhar faturamento
+Monitorar pagamentos recebidos
+Fluxo Principal do Sistema
+Cadastro de Aluno
+Recepcionista cadastra o aluno.
+Sistema valida os dados.
+Recepcionista associa um plano ao aluno.
+Sistema registra o vencimento.
+Controle Financeiro
+Sistema verifica diariamente os vencimentos.
+Caso o pagamento seja realizado:
+aluno permanece liberado.
+Caso esteja vencido:
+sistema marca como pendente;
+acesso é bloqueado;
+recepcionista é avisada.
+Entrada e Saída
+Aluno tenta acessar a academia.
+Sistema consulta situação financeira.
+Se estiver em dia:
+entrada liberada.
+Se estiver inadimplente:
+entrada bloqueada.
+Prioridade do Sistema
+Prioridade Alta (Essencial para funcionamento)
+
+Essas funcionalidades precisam ser feitas primeiro.
+
+Cadastro de alunos
+Cadastro de planos
+Atualização de cadastro
+Processamento financeiro
+Verificação de inadimplência
+Liberação/Bloqueio de acesso
+Prioridade Média
+
+Funcionalidades importantes para operação.
+
+Exclusão de cadastros
+Histórico de pagamentos
+Monitoramento de pendências
+Relatórios básicos
+Prioridade Baixa
+
+Melhorias futuras.
+
+Dashboard financeiro avançado
+Notificações automáticas
+Relatórios gráficos
+Controle de entrada por QR Code/cartão
+Product Backlog
+ID	Funcionalidade	Descrição	Prioridade
+PB01	Cadastro de Aluno	Permitir cadastrar novos alunos	Alta
+PB02	Editar Cadastro	Atualizar dados do aluno	Alta
+PB03	Excluir Cadastro	Remover aluno do sistema	Média
+PB04	Cadastro de Planos	Criar planos mensais/anual	Alta
+PB05	Vincular Plano	Associar plano ao aluno	Alta
+PB06	Registrar Pagamento	Registrar pagamento realizado	Alta
+PB07	Processar Financeiro	Validar pagamentos automaticamente	Alta
+PB08	Verificar Inadimplência	Identificar alunos com pendência	Alta
+PB09	Liberar Entrada	Liberar acesso para alunos em dia	Alta
+PB10	Bloquear Entrada	Bloquear inadimplentes	Alta
+PB11	Monitorar Pendências	Exibir alunos devendo	Média
+PB12	Relatório Financeiro	Mostrar faturamento e pendências	Média
+PB13	Histórico de Pagamentos	Consultar pagamentos antigos	Média
+PB14	Dashboard Administrativo	Painel visual para dono	Baixa
+PB15	Notificações Automáticas	Avisar vencimentos e atrasos	Baixa
+PB16	Controle por QR Code	Entrada automática por leitura	Baixa
