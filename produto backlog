@@ -1,113 +1,162 @@
-Descrição do Funcionamento do Sistema
+Como o Sistema Funciona
 
-O sistema será um software de gerenciamento para academia, voltado para controle de alunos, planos e financeiro.
-Ele terá três atores principais: Recepcionista, Sistema Automático e Dono da Academia.
+Este sistema é uma ferramenta de gestão para academias, focada no controle de membros, planos e finanças. O objetivo é que ele automatize os processos administrativos e financeiros da academia, diminuindo erros manuais e simplificando a administração de alunos, pagamentos, planos e o controle de acesso.
 
-Objetivo do Sistema
+O sistema permitirá:
 
-Automatizar o controle da academia, reduzindo erros manuais e facilitando:
+* Registro de alunos
+* Acompanhamento de planos
+* Gestão financeira
+* Monitoramento de pagamentos
+* Liberação e bloqueio de acesso
+* Emissão de relatórios financeiros
 
-Cadastro de alunos
-Controle de planos
-Controle financeiro
-Monitoramento de pagamentos
-Liberação de entrada e saída
-Relatórios financeiros
-Atores do Sistema
+# Quem Usa o Sistema
+
 1. Recepcionista
 
-Responsável pelo atendimento e gerenciamento operacional diário.
+Quem cuida do atendimento e da operação diária da academia.
 
-Responsabilidades:
-Cadastrar alunos
-Atualizar cadastro dos alunos
-Excluir alunos
-Cadastrar planos
-Atender clientes
-Consultar situação financeira do aluno
+Tarefas:
+* Registrar novos alunos
+* Atualizar dados de alunos
+* Remover cadastros
+* Registrar planos
+* Anotar pagamentos
+* Atender o público
+* Verificar a situação financeira dos alunos
+
 2. Sistema Automático
 
-Responsável pelas validações e processos automáticos.
+Responsável pelos processos e validações automáticas.
 
-Responsabilidades:
-Processar pagamentos
-Verificar alunos inadimplentes
-Liberar entrada de alunos adimplentes
-Bloquear acesso de alunos inadimplentes
-Monitorar vencimentos
-Gerar alertas financeiros
+Tarefas:
+* Processar pagamentos
+* Checar quem está com pagamentos atrasados
+* Permitir a entrada de alunos com pagamentos em dia
+* Impedir a entrada de alunos com pagamentos atrasados
+* Acompanhar datas de vencimento
+* Gerar avisos financeiros
+
 3. Dono da Academia
 
-Responsável pela gestão financeira e acompanhamento do negócio.
+Quem gerencia a academia em termos administrativos e financeiros.
 
-Responsabilidades:
-Visualizar relatórios financeiros
-Consultar alunos ativos/inadimplentes
-Acompanhar faturamento
-Monitorar pagamentos recebidos
-Fluxo Principal do Sistema
-Cadastro de Aluno
-Recepcionista cadastra o aluno.
-Sistema valida os dados.
-Recepcionista associa um plano ao aluno.
-Sistema registra o vencimento.
+Tarefas:
+* Acessar relatórios financeiros
+* Acompanhar o faturamento
+* Verificar alunos inadimplentes
+* Monitorar a performance financeira da academia
+
+# Fluxo Principal do Sistema
+
+Registro de Aluno
+
+1. A recepcionista registra o novo aluno.
+2. O sistema confere as informações fornecidas.
+3. Um plano é associado ao aluno.
+4. O sistema registra quando o pagamento vence.
+
 Controle Financeiro
-Sistema verifica diariamente os vencimentos.
-Caso o pagamento seja realizado:
-aluno permanece liberado.
-Caso esteja vencido:
-sistema marca como pendente;
-acesso é bloqueado;
-recepcionista é avisada.
-Entrada e Saída
-Aluno tenta acessar a academia.
-Sistema consulta situação financeira.
-Se estiver em dia:
-entrada liberada.
-Se estiver inadimplente:
-entrada bloqueada.
-Prioridade do Sistema
-Prioridade Alta (Essencial para funcionamento)
 
-Essas funcionalidades precisam ser feitas primeiro.
+1. Diariamente, o sistema verifica os pagamentos.
+2. Se o aluno estiver em dia:
+* o acesso é liberado.
+3. Se o pagamento estiver atrasado:
+* o aluno é marcado como inadimplente;
+* o acesso é bloqueado;
+* a recepcionista recebe um aviso.
 
-Cadastro de alunos
-Cadastro de planos
-Atualização de cadastro
-Processamento financeiro
-Verificação de inadimplência
-Liberação/Bloqueio de acesso
+Controle de Entrada
+
+1. O aluno tenta entrar na academia.
+2. O sistema checa sua situação financeira.
+3. Se estiver com os pagamentos em dia:
+* o acesso é permitido.
+4. Se estiver com os pagamentos atrasados:
+* o acesso é negado.
+
+# Prioridades do Sistema
+
+Prioridade Alta
+
+Funcionalidades cruciais para o funcionamento básico do sistema:
+
+* Cadastro de alunos
+* Cadastro de planos
+* Atualização de cadastro
+* Registro de pagamentos
+* Processamento financeiro
+* Verificação de inadimplência
+* Liberação e bloqueio de acesso
+
 Prioridade Média
 
-Funcionalidades importantes para operação.
+Funcionalidades importantes para a gestão administrativa:
 
-Exclusão de cadastros
-Histórico de pagamentos
-Monitoramento de pendências
-Relatórios básicos
+* Exclusão de cadastro
+* Histórico de pagamentos
+* Monitoramento de pendências
+* Relatórios financeiros básicos
+
 Prioridade Baixa
 
-Melhorias futuras.
+Melhorias futuras para o sistema:
 
-Dashboard financeiro avançado
-Notificações automáticas
-Relatórios gráficos
-Controle de entrada por QR Code/cartão
-Product Backlog
-ID	Funcionalidade	Descrição	Prioridade
-PB01	Cadastro de Aluno	Permitir cadastrar novos alunos	Alta
-PB02	Editar Cadastro	Atualizar dados do aluno	Alta
-PB03	Excluir Cadastro	Remover aluno do sistema	Média
-PB04	Cadastro de Planos	Criar planos mensais/anual	Alta
-PB05	Vincular Plano	Associar plano ao aluno	Alta
-PB06	Registrar Pagamento	Registrar pagamento realizado	Alta
-PB07	Processar Financeiro	Validar pagamentos automaticamente	Alta
-PB08	Verificar Inadimplência	Identificar alunos com pendência	Alta
-PB09	Liberar Entrada	Liberar acesso para alunos em dia	Alta
-PB10	Bloquear Entrada	Bloquear inadimplentes	Alta
-PB11	Monitorar Pendências	Exibir alunos devendo	Média
-PB12	Relatório Financeiro	Mostrar faturamento e pendências	Média
-PB13	Histórico de Pagamentos	Consultar pagamentos antigos	Média
-PB14	Dashboard Administrativo	Painel visual para dono	Baixa
-PB15	Notificações Automáticas	Avisar vencimentos e atrasos	Baixa
-PB16	Controle por QR Code	Entrada automática por leitura	Baixa
+* Painel financeiro avançado
+* Notificações automáticas
+* Gráficos de relatórios
+* Controle de acesso via QR Code/cartão
+
+# Product Backlog
+
+| ID | Funcionalidade | Descrição | Prioridade |
+| :---- | :-------------------- | :----------------------------------------------- | :--------- |
+| PB01 | Cadastro de Aluno | Permitir registrar novos alunos | Alta |
+| PB02 | Editar Cadastro | Atualizar os dados de um aluno | Alta |
+| PB03 | Excluir Cadastro | Remover um aluno do sistema | Média |
+| PB04 | Cadastro de Planos | Criar planos mensais e anuais | Alta |
+| PB05 | Vincular Plano | Associar um plano a um aluno | Alta |
+| PB06 | Registrar Pagamento | Registrar os pagamentos feitos | Alta |
+| PB07 | Processar Financeiro | Validar pagamentos automaticamente | Alta |
+| PB08 | Verificar Inadimplência | Identificar alunos com pagamentos pendentes | Alta |
+| PB09 | Liberar Entrada | Permitir a entrada de alunos em dia | Alta |
+| PB10 | Bloquear Entrada | Impedir a entrada de alunos inadimplentes | Alta |
+| PB11 | Monitorar Pendências | Mostrar alunos com pagamentos em atraso | Média |
+| PB12 | Relatório Financeiro | Apresentar faturamento e pendências | Média |
+| PB13 | Histórico de Pagamentos | Consultar pagamentos anteriores | Média |
+| PB14 | Dashboard Admin | Painel visual para a administração | Baixa |
+| PB15 | Notificações Auto | Avisar sobre vencimentos e atrasos | Baixa |
+| PB16 | Controle QR Code | Acesso automático pela leitura de código | Baixa |
+
+# Planejamento de Sprints
+
+Sprint 1 (MVP)
+
+* Cadastro de alunos
+* Cadastro de planos
+* Registro de pagamentos
+* Verificação de inadimplência
+
+Sprint 2
+
+* Controle de acesso
+* Relatórios financeiros
+* Histórico de pagamentos
+
+Sprint 3
+
+* Dashboard administrativo
+* QR Code
+* Notificações automáticas
+MVP do Sistema
+
+A versão inicial do sistema apresentará:
+
+Inscrição de estudantes
+Registro de planos
+Anotação de pagamentos
+Execução financeira
+Checagem de atrasos
+Autorização e impedimento de acesso
+Sumário financeiro fundamental
