@@ -1,0 +1,56 @@
+CREATE DATABASE academia;
+USE academia;
+CREATE TABLE alunos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    telefone VARCHAR(20),
+    status VARCHAR(20)
+);
+CREATE TABLE planos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50),
+    valor DECIMAL(10,2)
+);
+CREATE TABLE pagamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    aluno_id INT,
+    plano_id INT,
+    valor DECIMAL(10,2),
+    status VARCHAR(20),
+
+    FOREIGN KEY (aluno_id) REFERENCES alunos(id),
+    FOREIGN KEY (plano_id) REFERENCES planos(id)
+);
+CREATE TABLE acessos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    aluno_id INT,
+    acesso VARCHAR(20),
+
+    FOREIGN KEY (aluno_id) REFERENCES alunos(id)
+);
+INSERT INTO alunos (nome, telefone, status)
+VALUES
+('Joao', '99999-1111', 'ATIVO'),
+('Maria', '99999-2222', 'ATIVO'),
+('Carlos', '99999-3333', 'INADIMPLENTE');
+
+INSERT INTO planos (nome, valor)
+VALUES
+('Mensal', 120.00),
+('Anual', 1000.00);
+
+INSERT INTO pagamentos (aluno_id, plano_id, valor, status)
+VALUES
+(1, 1, 120.00, 'PAGO'),
+(2, 2, 1000.00, 'PAGO'),
+(3, 1, 120.00, 'PENDENTE');
+
+INSERT INTO acessos (aluno_id, acesso)
+VALUES
+(1, 'LIBERADO'),
+(2, 'LIBERADO'),
+(3, 'BLOQUEADO');
+
+SELECT * FROM alunos;
+SELECT * FROM pagamentos;
+SELECT * FROM acessos;
