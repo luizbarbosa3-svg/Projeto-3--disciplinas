@@ -1,5 +1,4 @@
-CREATE DATABASE academia;
-USE academia;
+
 CREATE TABLE alunos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100),
@@ -26,16 +25,6 @@ CREATE TABLE pagamentos (
     FOREIGN KEY (plano_id) REFERENCES planos(id)
 );
 
-CREATE TABLE acessos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    aluno_id INT,
-    acesso VARCHAR(20),
-    data_acesso DATE,
-    hora_acesso TIME,
-
-    FOREIGN KEY (aluno_id) REFERENCES alunos(id)
-);
-
 INSERT INTO alunos (nome, telefone, status)
 VALUES
 ('Joao', '99999-1111', 'ATIVO'),
@@ -51,20 +40,9 @@ INSERT INTO pagamentos
 (aluno_id, plano_id, valor, status, data_pagamento, hora_pagamento)
 VALUES
 (1, 1, 120.00, 'PAGO', '2026-05-25', '08:30:00'),
-
 (2, 2, 1000.00, 'PAGO', '2026-05-25', '09:00:00'),
-
 (3, 1, 120.00, 'PENDENTE', '2026-05-25', '10:15:00');
 
-INSERT INTO acessos 
-(aluno_id, acesso, data_acesso, hora_acesso)
-VALUES
-(1, 'LIBERADO', '2026-05-25', '08:35:00'),
-
-(2, 'LIBERADO', '2026-05-25', '09:10:00'),
-
-(3, 'BLOQUEADO', '2026-05-25', '10:20:00');
-
 SELECT * FROM alunos;
+SELECT * FROM planos;
 SELECT * FROM pagamentos;
-SELECT * FROM acessos;
