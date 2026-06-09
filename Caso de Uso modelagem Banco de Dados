@@ -1,5 +1,5 @@
 Atores do sistema:
-  Recepcionista: Será responsável por gerenciar os alunos,planos e pagamentos
+  Funcionário: Será responsável por gerenciar os alunos,planos e pagamentos
   Sistema: Terá um sistema que realiza o processamento automático, para pagamentos, para ver quem pago certo e quem está devendo, e liberara entrada e saida
   Dono: Fica responsável por relatório financeiros
 
