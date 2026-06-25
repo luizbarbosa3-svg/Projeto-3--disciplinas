@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:20px;
+        }
+
+        .container{
+            background:white;
+            width:100%;
+            max-width:450px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:25px;
+            color:#333;
+        }
+
+        label{
+            display:block;
+            margin-bottom:5px;
+            font-weight:bold;
+            color:#555;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:8px;
+            margin-bottom:15px;
+            font-size:16px;
+        }
+
+        input:focus{
+            outline:none;
+            border-color:#4f46e5;
+        }
+
+        .botoes{
+            display:flex;
+            gap:10px;
+            margin-top:10px;
+        }
+
+        button{
+            flex:1;
+            padding:12px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:16px;
+            font-weight:bold;
+        }
+
+        .salvar{
+            background:#4f46e5;
+            color:white;
+        }
+
+        .salvar:hover{
+            background:#4338ca;
+        }
+
+        .voltar{
+            background:#e5e7eb;
+            color:#333;
+        }
+
+        .voltar:hover{
+            background:#d1d5db;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎓 Cadastro de Alunos</h1>
+
+        <form>
+            <label>Nome</label>
+            <input type="text" placeholder="Digite o nome do aluno">
+
+            <label>Telefone</label>
+            <input type="text" placeholder="(67) 99999-9999">
+
+            <label>Condição</label>
+            <input type="text" placeholder="Ativo, Inativo, Bolsista...">
+
+            <div class="botoes">
+                <button type="submit" class="salvar">
+                    Salvar
+                </button>
+
+                <button type="button" class="voltar" onclick="history.back()">
+                    Voltar
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

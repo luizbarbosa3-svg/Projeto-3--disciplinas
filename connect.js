@@ -1,0 +1,25 @@
+CREATE TABLE aluno (
+    id_al SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    telefone VARCHAR(20),
+    condicao_aluno VARCHAR(20)
+);
+
+    CREATE TABLE plano (
+        id_pla SERIAL PRIMARY KEY,
+        nome VARCHAR(50),
+        valor DECIMAL(10,2)
+    );
+    
+CREATE TABLE pagamento (
+    id_pag SERIAL PRIMARY KEY,
+    id_al INT,
+    id_pla INT,
+    valor DECIMAL(10,2),
+    condicao_pagamento VARCHAR(20),
+    data_pagamento DATE,
+    hora_pagamento TIME,
+
+    FOREIGN KEY (id_al) REFERENCES aluno(id_al),
+      FOREIGN KEY (id_pla) REFERENCES plano(id_pla)
+);

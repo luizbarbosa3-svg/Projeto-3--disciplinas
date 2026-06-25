@@ -1,0 +1,10 @@
+#Este arquivo contem as chaves que iremos
+#utilizar no servidor 
+APP_HOST=127.0.0.1
+APP_PORT=3000
+
+DB_USER=postgres
+DB_PASSWORD=ifms
+DB_HOST=127.0.0.1
+DB_NAME=projeto
+DB_PORT=5432
